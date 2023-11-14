@@ -13,14 +13,14 @@ public static void main(String[] args) {
         int fails = result.getFailureCount();
         
         for (Failure failure : result.getFailures()) {
-            logger.log(failure.toString());
+            logger.severe(failure.toString());
         }
 
         if (fails > 0) {
-            logger.log("Tests failed: " + fails);
+            logger.severe("Tests failed: " + fails);
             System.exit(1); // Non-zero exit code indicates an error
         } else {
-            logger.log("All tests passed successfully.");
+            logger.info("All tests passed successfully.");
             System.exit(0); // Zero exit code indicates success
         }
     }
