@@ -9,14 +9,14 @@ public class TestRunner {
         int fails = result.getFailureCount();
         
         for (Failure failure : result.getFailures()) {
-            logger.println(failure.toString());
+            logger.log(failure.toString());
         }
 
         if (fails > 0) {
-            logger.println("Tests failed: " + fails);
+            logger.log("Tests failed: " + fails);
             System.exit(1); // Non-zero exit code indicates an error
         } else {
-            logger.println("All tests passed successfully.");
+            logger.log("All tests passed successfully.");
             System.exit(0); // Zero exit code indicates success
         }
     }
