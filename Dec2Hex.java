@@ -28,7 +28,7 @@ class Dec2Hex
 	int num;
         num = Arg1;
         String hexadecimal="";
-        logger.info("Converting the Decimal Value " + num + " to Hex...");
+        logger.info("Converting the Decimal Value {0} to Hex...", num);
 
         while(num != 0)
 {
@@ -37,7 +37,7 @@ class Dec2Hex
             num= num/16;
         }
 
-        logger.info("Hexadecimal representation is: " + hexadecimal);
+        logger.info("Hexadecimal representation is: {0}", hexadecimal);
 	}catch (NumberFormatException e) {
             logger.severe("Error: Input is not a valid integer. Please provide a decimal number.");
         }
