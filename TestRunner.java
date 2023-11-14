@@ -4,7 +4,10 @@ import org.junit.runner.notification.Failure;
 import java.util.logging.Logger;
 
 public class TestRunner {
-    public static void main(String[] args) {
+	// Declare Logger for the TestRunner class
+        private static final Logger logger = Logger.getLogger(TestRunner.class.getName());
+    
+public static void main(String[] args) {
         Result result = JUnitCore.runClasses(Dec2HexTest.class);
 
         int fails = result.getFailureCount();
