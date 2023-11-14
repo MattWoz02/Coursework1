@@ -17,7 +17,7 @@ public static void main(String[] args) {
         }
 
         if (fails > 0) {
-            logger.severe("Tests failed: " + fails);
+            logger.severe("Tests failed: {0}", fails);
             System.exit(1); // Non-zero exit code indicates an error
         } else {
             logger.info("All tests passed successfully.");
